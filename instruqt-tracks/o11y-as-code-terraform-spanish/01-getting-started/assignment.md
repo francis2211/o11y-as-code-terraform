@@ -1,19 +1,19 @@
 ---
 slug: getting-started
-id: mpgjlxhbiwmk
+id: 
 type: challenge
-title: Getting Started
-teaser: Getting Started with Terraform
+title: Empezando
+teaser: Empezando con Terraform
 notes:
 - type: text
   contents: |-
-    # Getting Started with Observability as Code
+    # Empezando con Observabilidad como Código
 
-    In this challenge, you're tasked with
-    - signing up for a Free Tier New Relic Account
-    - configuring your applications with the `NEW_RELIC_LICENSE_KEY`
-    - starting your applications to generate telemetry
-    - check the logs to ensure everything is working
+    En este desafío, se le encarga:
+    - registrarse para obtener una cuenta gratuita de New Relic.
+    - configurar sus aplicaciones con la NEW_RELIC_LICENSE_KEY.
+    - iniciar sus aplicaciones para generar telemetría.
+    - verificar los registros para asegurarse de que todo está funcionando.
 tabs:
 - title: Terminal
   type: terminal
@@ -27,50 +27,49 @@ difficulty: basic
 timelimit: 600
 ---
 
-🧪 Step 1: Setup applications
-=======================
+🧪 Paso 1: Configurar las aplicaciones
+======================================
 
-- In the root workspace directory, run the `make` command.
+-   En el directorio principal del espacio de trabajo, ejecute el comando `make`.
 
-```
-make
-```
+    ```
+    `make`
+    ```
 
-- It will generate `.env` files for your applications.
+-   Esto generará archivos `.env` para sus aplicaciones.
 
-🧪 Step 2: Add your New Relic License Keys
-=======================
+🧪 Paso 2: Agregar las claves de licencia de New Relic
+======================================================
 
-- Using the Editor tab, update the `apps/*/.env` files to add your `NEW_RELIC_LICENSE_KEY` to each application.
+-   Usando la pestaña del Editor, actualice los archivos `apps/*/.env` para agregar su `NEW_RELIC_LICENSE_KEY` a cada aplicación.
 
-```
-- apps/web-api/.env
-- apps/login-service/.env
-- apps/cloud-infra/.env
-```
+    ```
+    - apps/web-api/.env
+    - apps/login-service/.env
+    - apps/cloud-infra/.env`
+    ```
+Archivo .env:
 
-.env file:
-```
-NEW_RELIC_LICENSE_KEY=AABBCC
-```
+makefileCopy code
+    ```
+    NEW_RELIC_LICENSE_KEY=AABBCC
+    ```
+Nota: `NRIA_LICENSE_KEY` toma el mismo valor que `NEW_RELIC_LICENSE_KEY`.
 
-Note: `NRIA_LICENSE_KEY` takes the same value as `NEW_RELIC_LICENSE_KEY`
+🏁 Paso 3: Finalizar
+====================
 
-🏁 Step 3: Finish
-=========
+-   Verifique que todo esté funcionando.
 
-- Verify that everything is working.
+    ```
+    make up
+    ```
 
-```
-make up
-```
+-   Vea los registros de las aplicaciones.
+    ```
+    make logs
+    ```
 
-- View the logs from the applications.
+-   En segundo plano, se están ejecutando pruebas de carga para simular la carga en sus aplicaciones. En unos minutos, estos datos aparecerán en la interfaz de usuario de New Relic.
 
-```
-make logs
-```
-
-- Behind the scenes smoke tests are running to simulate load on your applications. In a few minutes, this data will appear in New Relic UI.
-
-To complete the challenge, press **Check**
+Para completar el desafío, presione Comprobar.
