@@ -1,48 +1,58 @@
 [![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
 
-# Workshop: Observability as Code with Terraform
+Taller: Observabilidad como código con Terraform
+================================================
 
-This app demonstrates how to incorporate Terraform and New Relic together using Observability as Code.
+Esta aplicación demuestra cómo incorporar Terraform y New Relic juntos utilizando Observabilidad como código.
 
-## Set up Terraform and manage your secrets
+Configurar Terraform y gestionar tus secretos
+---------------------------------------------
 
-### Setup accounts
-- [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
-- [New Relic](https://newrelic.com/signup)
+### Configurar cuentas
 
-#### Confirm terraform is installed
-```
-which terraform
-```
+-   [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+-   [New Relic](https://newrelic.com/signup)
 
-#### Install Terraform
-```
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
-```
+#### Confirmar la instalación de Terraform
 
-#### Get Credentials
-- https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher
+bashCopy code
 
-#### Clone the repo and run the app
-```
-git clone
+`which terraform`
+
+#### Instalar Terraform
+
+bashCopy code
+
+`brew tap hashicorp/tap
+brew install hashicorp/tap/terraform`
+
+#### Obtener credenciales
+
+-   <https://one.newrelic.com/launcher/api-keys-ui.api-keys-launcher>
+
+#### Clonar el repositorio y ejecutar la aplicación
+
+goCopy code
+
+`git clone
 make
-make up
-```
+make up`
 
-#### Configure your secrets
-```
-make source
-```
+#### Configurar tus secretos
 
-### Run Terraform
-```
-cd o11y
+bashCopy code
+
+`make source`
+
+### Ejecutar Terraform
+
+bashCopy code
+
+`cd o11y
 terraform apply
-terraform down
-```
+terraform down`
 
-## LICENSE
+LICENCIA
+--------
 
-This is licensed with the Apache 2.0 [license](LICENSE).
+Esto está licenciado con la licencia Apache 2.0 [licencia](https://chat.openai.com/LICENSE).
