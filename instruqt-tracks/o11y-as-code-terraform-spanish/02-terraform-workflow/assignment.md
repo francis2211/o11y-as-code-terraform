@@ -1,6 +1,6 @@
 ---
 slug: terraform-workflow
-id: aiexvh69ywaq
+id: 
 type: challenge
 title: Terraform workflow
 teaser: Review terraform commands
@@ -9,12 +9,12 @@ notes:
   contents: |-
     # Terraform Workflow
 
-    In this challenge, you're tasked with
-    - Adding your New Relic credentials to `o11y/terraform.tfvars`
-    - initializing terraform using `terraform init`
-    - Validating your terraform config using `terraform validate`
-    - Previewing your changes using `terraform plan`
-    - Applying your changes using `terraform apply`
+    En este desafío, se le asigna la tarea de:
+    -   Agregar sus credenciales de New Relic a `o11y/terraform.tfvars`
+    -   Inicializar Terraform utilizando `terraform init`
+    -   Validar su configuración de Terraform utilizando `terraform validate`
+    -   Previsualizar sus cambios utilizando `terraform plan`
+    -   Aplicar sus cambios utilizando `terraform apply`
 tabs:
 - title: Editor
   type: code
@@ -27,61 +27,58 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Preparing your terraform `o11y/terraform.tfvars` file
-=======================
+🧪 Paso 1: Preparar el archivo `o11y/terraform.tfvars` de Terraform
+===================================================================
 
-- Using the Editor tab, navigate to `o11y/terraform.tfvars` and drop in your secrets.
+-   Usando la pestaña Editor, navegue a `o11y/terraform.tfvars` y agregue sus secretos.
 
-- Note: `NEW_RELIC_API_KEY` is different from `NEW_RELIC_LICENSE_KEY`
-- Note: `NEW_RELIC_API_KEY` should start with `NRAK-`
+-   Nota: `NEW_RELIC_API_KEY` es diferente de `NEW_RELIC_LICENSE_KEY`
 
-- Update `ALERT_NOTIFICATION_EMAIL` to point to your email address.
+-   Nota: `NEW_RELIC_API_KEY` debe comenzar con `NRAK-`
 
-🧪 Step 2: terraform init
-=======================
+-   Actualice `ALERT_NOTIFICATION_EMAIL` para que apunte a su dirección de correo electrónico.
 
-- In the Terminal tab, change directory to `o11y` then run the following command:
+🧪 Paso 2: terraform init
+=========================
 
-```
-terraform init
-```
+-   En la pestaña Terminal, cambie el directorio a `o11y` y ejecute el siguiente comando:
 
-🧪 Step 3: terraform validate
-=======================
+    ```
+    terraform init
+    ```
+🧪 Paso 3: terraform validate
+=============================
 
-- In the Editor tab, open `o11y/main.tf`
-- In `o11y/main.tf` add this code snippet after `# TODO: Output the names of the apps we are going to monitor`
+-   En la pestaña Editor, abra `o11y/main.tf`
+-   En `o11y/main.tf`, agregue este fragmento de código después de `# TODO: Output the names of the apps we are going to monitor`
+    ```
+    output "o11y-as-code-apps" {
+        value = toset(var.APPS)
+    }`
+    ```
+-   Recuerde guardar el archivo.
 
-```
-output "o11y-as-code-apps" {
-  value = toset(var.APPS)
-}
-```
+-   Usando la pestaña Terminal, cambie el directorio a `o11y` y valide los cambios ejecutando el siguiente comando:
+    ```
+    terraform validate
+    ```
+    
+🧪 Paso 4: terraform plan
+=========================
 
-- Remember to save the file.
+-   Usando la pestaña Terminal, obtenga una vista previa de los cambios utilizando el siguiente comando:
 
-- Using the Terminal tab, change directory to `o11y` then validate the changes by running the following command:
+    ```
+    terraform plan
+    ```
 
-```
-terraform validate
-```
+🏁 Paso 5: terraform apply
+==========================
 
-🧪 Step 3: terraform plan
-=======================
+-   Una vez que esté satisfecho con los cambios, ejecute el siguiente comando para aplicarlos.
 
-- Using the Terminal tab, preview the changes using the following command:
+    ```
+    terraform apply
+    ```
 
-```
-terraform plan
-```
-
-🏁 Step 4: terraform apply
-=======================
-
-- Once you're satisfied with the changes, run the following command to apply the changes.
-
-```
-terraform apply
-```
-
-- To complete the challenge, press **Check**
+-   Para completar el desafío, presione Check
