@@ -1,19 +1,19 @@
 ---
 slug: getting-started
-id: mpgjlxhbiwmk
+id: 
 type: challenge
 title: Getting Started
 teaser: Getting Started with Terraform
 notes:
 - type: text
   contents: |-
-    # Getting Started with Observability as Code
+    # Empezando con Observability as Code
 
-    In this challenge, you're tasked with
-    - signing up for a Free Tier New Relic Account
-    - configuring your applications with the `NEW_RELIC_LICENSE_KEY`
-    - starting your applications to generate telemetry
-    - check the logs to ensure everything is working
+    En este desafío, se te pide que
+    - te registres en una cuenta gratuita de New Relic
+    - configures tus aplicaciones con la clave de licencia de NEW_RELIC_LICENSE_KEY
+    - inicies tus aplicaciones para generar telemetría
+    - revises los registros para asegurarte de que todo está funcionando
 tabs:
 - title: Terminal
   type: terminal
@@ -27,21 +27,21 @@ difficulty: basic
 timelimit: 600
 ---
 
-🧪 Step 1: Setup applications
+🧪 Paso 1: Configura tus aplicaciones
 =======================
 
-- In the root workspace directory, run the `make` command.
+- En el directorio de trabajo raíz, ejecuta el comando make.
 
 ```
 make
 ```
 
-- It will generate `.env` files for your applications.
+- Se generarán archivos .env para tus aplicaciones.
 
-🧪 Step 2: Add your New Relic License Keys
+🧪 SPaso 2: Agrega tus claves de licencia de New Relic
 =======================
 
-- Using the Editor tab, update the `apps/*/.env` files to add your `NEW_RELIC_LICENSE_KEY` to each application.
+- Usa la pestaña del Editor para actualizar los archivos apps/*/.env y agregar tu clave de licencia de NEW_RELIC_LICENSE_KEY a cada aplicación.
 
 ```
 - apps/web-api/.env
@@ -49,28 +49,30 @@ make
 - apps/cloud-infra/.env
 ```
 
-.env file:
+Archivo .env:
+
 ```
 NEW_RELIC_LICENSE_KEY=AABBCC
 ```
 
-Note: `NRIA_LICENSE_KEY` takes the same value as `NEW_RELIC_LICENSE_KEY`
+Nota: NRIA_LICENSE_KEY toma el mismo valor que NEW_RELIC_LICENSE_KEY
 
-🏁 Step 3: Finish
+
+🏁 Paso 3: Termina
 =========
 
-- Verify that everything is working.
+- Verifica que todo está funcionando.
 
 ```
 make up
 ```
 
-- View the logs from the applications.
+- Visualiza los registros de las aplicaciones.
 
 ```
 make logs
 ```
 
-- Behind the scenes smoke tests are running to simulate load on your applications. In a few minutes, this data will appear in New Relic UI.
+- Detrás de escena, se están ejecutando pruebas de humo para simular carga en tus aplicaciones. En unos minutos, estos datos aparecerán en la interfaz de usuario de New Relic.
 
-To complete the challenge, press **Check**
+Para completar el desafío, presiona Comprobar.
