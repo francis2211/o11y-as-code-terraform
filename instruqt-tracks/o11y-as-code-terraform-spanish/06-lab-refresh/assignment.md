@@ -1,18 +1,19 @@
 ---
 slug: lab-refresh
-id: oe2kcqay3m63
+id: cgt0dnt5rexj
 type: challenge
 title: 'Lab: Refresh'
-teaser: Reverting manual changes with terraform refresh
+teaser: Revertir cambios manuales con terraform refresh
 notes:
 - type: text
   contents: |-
-    # Lab: Reverting manual changes
+    # Lab: Revertir cambios manuales
 
-    In this challenge, you're tasked with
-    - Manually modifying resources in the New Relic UI
-    - Refreshing the state with `terraform refresh`
-    - Reverting manual changes with `terraform apply`
+    En este desafío, se te asignará la tarea de
+
+    - Modificar manualmente recursos en la interfaz de usuario de New Relic
+    - Actualizar el estado con `terraform refresh`
+    - Revertir cambios manuales con `terraform apply`
 tabs:
 - title: Terminal
   type: terminal
@@ -25,15 +26,15 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Modify an existing resource
+🧪  Paso 1: Modificar un recurso existente
 =======================
 
-- Navigate to your imported New Relic Dashboard created in the previous challenge and delete some stuff.
+- Dirígete al panel de control de New Relic importado creado en el desafío anterior y elimina algunos elementos.
 
-🧪 Step 2: terraform refresh
+🧪 Paso 2: terraform refresh
 =========
 
-- In the terminal tab, `cd o11y`, run `terraform refresh` to refresh the state of your resources.
+- En la pestaña del terminal, en `cd o11y`, ejecuta `terraform refresh` para actualizar el estado de tus recursos.
 
 ```
 terraform refresh
@@ -42,17 +43,18 @@ terraform refresh
 🏁 Step 3: terraform apply
 =========
 
-- (Optional) Using the Terminal tab, source your environment variables by navigating to the `o11y` directory and running the following command:
+- (Opcional) En la pestaña del Terminal, carga tus variables de entorno navegando hasta el directorio `o11y` y ejecutando el siguiente comando:
 
 ```
 source .env
 ```
 
-- To fix any manual changes to your resources, run `terraform apply` and confirm the changes.
+- Para corregir cualquier cambio manual en tus recursos, ejecuta `terraform apply` y confirma los cambios.
+
 
 ```
 terraform apply
 ```
 
-To complete the challenge, press **Check**
+Para completar el desafío, presiona  **Check**
 

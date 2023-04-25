@@ -1,18 +1,18 @@
 ---
 slug: lab-tags
-id: jadmmmxiarjr
+id: obg6yuxxcyvq
 type: challenge
 title: 'Lab: Tags'
-teaser: Tagging your applications
+teaser: Etiquetar tus aplicaciones
 notes:
 - type: text
   contents: |-
-    # Lab: Tagging your applications
+    # Laboratorio: Etiquetando tus aplicaciones
 
-    In this challenge, you're tasked with
-    - fetching your application resources from New Relic
-    - tagging your apps with `team` and `env` key value pairs.
-    - reviewing your tags in New Relic
+    En este desafío, se te asigna la tarea de:
+    - Obtener tus recursos de aplicación desde New Relic
+    - Etiquetar tus aplicaciones con pares clave-valor equipo y entorno.
+    - Revisar tus etiquetas en New Relic.
 tabs:
 - title: Editor
   type: code
@@ -25,11 +25,11 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Add tags to your applications
+🧪 Paso 1: Agregar etiquetas a tus aplicaciones
 =======================
 
-- Fetch the application metadata from New Relic
-- In `o11y/main.tf` add this code snippet after `# TODO: Fetch the apps from New Relic`
+- Obtén los metadatos de la aplicación de New Relic.
+- En `o11y/main.tf` agrega este código después de `# TODO: Obtener las aplicaciones de New Relic.`
 
 ```
 data "newrelic_entity" "APPS" {
@@ -40,8 +40,8 @@ data "newrelic_entity" "APPS" {
 }
 ```
 
-- Output the app metadata
-- In `o11y/main.tf` add this code snippet after `# TODO: Output the guids of the apps we are going to monitor`
+- Salida de los metadatos de la aplicación.
+- En `o11y/main.tf` agrega este código después de `# TODO: Mostrar los GUID de las aplicaciones que vamos a supervisar.`
 
 ```
 output "o11y_apps" {
@@ -49,27 +49,26 @@ output "o11y_apps" {
 }
 ```
 
-- Remember to save the file.
-
-- Using the Terminal tab, preview the changes using the following command:
+- Recuerda guardar el archivo.
+- Usando la pestaña Terminal, visualiza los cambios utilizando el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez que estés satisfecho con los cambios, ejecuta el siguiente comando para aplicar los cambios.
 
 ```
 terraform apply
 ```
 
-🧪 Step 2: Add tags to your applications
+🧪 Paso 2: Agregar etiquetas a tus aplicaciones
 =======================
 
-- Using the metadata retrieved in the previous step, we now have access to the guid which `newrelic_entity_tags` needs.
-- Review the `TF_VAR_TAGS` environment variable in `o11y/terraform.tfvars`
-- Use environment variables to tag your applications dynamically
-- In `o11y/main.tf` add this code snippet after `# TODO: Tag each app with the team and environment values`
+- Usando los metadatos recuperados en el paso anterior, ahora tenemos acceso al guid que necesita `newrelic_entity_tags.`
+- Revisa la variable de entorno `TF_VAR_TAGS` en `o11y/terraform.tfvars`
+- Usa variables de entorno para etiquetar tus aplicaciones dinámicamente
+- En o11y/main.tf agrega este código después de `# TODO: Etiquetar cada aplicación con los valores de equipo y entorno.`
 
 ```
 resource "newrelic_entity_tags" "APPS" {
@@ -86,21 +85,21 @@ resource "newrelic_entity_tags" "APPS" {
 }
 ```
 
-- Remember to save the file.
+- Recuerda guardar el archivo.
 
-🏁 Step 3: Finish
+🏁 Paso 3: Finalizar
 =======================
 
-- Using the Terminal tab, preview the changes using the following command:
+- Usando la pestaña Terminal, visualiza los cambios utilizando el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez que estés satisfecho con los cambios, ejecuta el siguiente comando para aplicar los cambios.
 
 ```
 terraform apply
 ```
 
-- To complete the challenge, press **Check**
+- Para completar el desafío, presiona **Check**

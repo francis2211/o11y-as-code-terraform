@@ -1,19 +1,20 @@
 ---
 slug: lab-alerts-workflows-and-notifications
-id: uh4h9z1ekjxc
+id: hozaf1qzkbhd
 type: challenge
 title: 'Lab: Alerts, Workflows and Notifications'
-teaser: Setup alerts and notifications before issues become a larger issue.
+teaser: Configura alertas y notificaciones antes de que los problemas se conviertan
+  en un problema mayor.
 notes:
 - type: text
   contents: |-
-    # Creating Alerts, Workflows and Notifications
+    # Creando Alertas, Flujos de Trabajo y Notificaciones
 
-    In this challenge, you're tasked with
-    - Creating alert policies for each app
-    - Each app will monitor for latency and error rates
-    - Configure an email destintation and channel
-    - Adding a workflow for sending notifications when certain thresholds are met.
+    En este desafío, se te asigna:
+    - Crear políticas de alerta para cada aplicación
+    - Cada aplicación monitoreará la latencia y las tasas de error
+    - Configurar un destino y canal de correo electrónico
+    - Agregar un flujo de trabajo para enviar notificaciones cuando se alcancen ciertos umbrales.
 tabs:
 - title: Editor
   type: code
@@ -26,11 +27,11 @@ tabs:
 difficulty: basic
 timelimit: 1800
 ---
-🧪 Step 1: Create Alert Policies
+🧪 Paso 1: Crear políticas de alerta
 =======================
 
-- Use `newrelic_alert_policy` to create alert policies
-- In `o11y/main.tf` add this code snippet after `# TODO: Create an alert policy for the apps`
+- Usa `newrelic_alert_policy` para crear políticas de alerta
+- En `o11y/main.tf`, agrega este fragmento de código después de `# TODO: Create an alert policy for the apps`
 
 ```
 resource "newrelic_alert_policy" "alert_policies" {
@@ -40,13 +41,13 @@ resource "newrelic_alert_policy" "alert_policies" {
 }
 ```
 
-- Remember to save the file.
+- Recuerda guardar el archivo.
 
-🧪 Step 2: Create Alert Conditions
+🧪 Paso 2: Crear condiciones de alerta
 =======================
 
-- Use `newrelic_nrql_alert_condition` to create alert conditions observing latency
-1. In `o11y/main.tf` add this code snippet after `# TODO: Create an alert condition observing latency of the apps`
+- Usa `newrelic_nrql_alert_condition` para crear condiciones de alerta que observen la latencia.
+1. En `o11y/main.tf`, agrega este fragmento de código después de `# TODO: Create an alert condition observing latency of the apps`
 
 ```
 resource "newrelic_nrql_alert_condition" "Latency" {
@@ -82,8 +83,8 @@ resource "newrelic_nrql_alert_condition" "Latency" {
 }
 ```
 
-- Use `newrelic_nrql_alert_condition` to create alert conditions observing error rates
-2. In `o11y/main.tf` add this code snippet after `# TODO: Create an alert condition observing error rates of the apps`
+- Usa `newrelic_nrql_alert_condition` para crear condiciones de alerta que observen las tasas de error.
+2. En `o11y/main.tf`, agrega este fragmento de código después de `# TODO: Create an alert condition observing error rates of the apps`
 
 ```
 resource "newrelic_nrql_alert_condition" "ErrorRate" {
@@ -119,8 +120,8 @@ resource "newrelic_nrql_alert_condition" "ErrorRate" {
 }
 ```
 
-- Use `newrelic_nrql_alert_condition` to create alert conditions observing traffic patterns
-- In `o11y/main.tf` add this code snippet after `# TODO: Create an alert condition observing traffic of the apps`
+- Usa `newrelic_nrql_alert_condition` para crear condiciones de alerta observando los patrones de tráfico.
+- En `o11y/main.tf`, agrega este fragmento de código después de `# TODO: Crear una condición de alerta observando el tráfico de las aplicaciones.`
 
 ```
 resource "newrelic_nrql_alert_condition" "Traffic" {
@@ -156,8 +157,8 @@ resource "newrelic_nrql_alert_condition" "Traffic" {
 }
 ```
 
-- Use `newrelic_nrql_alert_condition` to create alert conditions observing saturation
-3. In `o11y/main.tf` add this code snippet after `# TODO: Create an alert condition observing saturation of the apps`
+- Usa `newrelic_nrql_alert_condition` para crear condiciones de alerta que observen la saturación.
+3. En `o11y/main.tf` agrega este fragmento de código después de `# TODO: Crear una condición de alerta que observe la saturación de las aplicaciones.`
 
 ```
 resource "newrelic_nrql_alert_condition" "Saturation" {
@@ -195,11 +196,11 @@ resource "newrelic_nrql_alert_condition" "Saturation" {
 
 - Remember to save the file.
 
-🧪 Step 2: Setup Workflows
+🧪 Paso 2: Configurar Workflows
 =======================
 
-- Use `newrelic_workflow` to create a new workflow
-- In `o11y/main.tf` add this code snippet after `# TODO: Create a workflow for each apps`
+- Utilice `newrelic_workflow` para crear un nuevo flujo de trabajo
+- En `o11y/main.tf` agregue este fragmento de código después de `# TODO: Crear un flujo de trabajo para cada aplicación`
 
 ```
 resource "newrelic_workflow" "Workflow" {
@@ -225,11 +226,11 @@ resource "newrelic_workflow" "Workflow" {
 
 - Remember to save the file.
 
-🧪 Step 2: Create Notifications
+🧪 Paso 2: Crear Notificaciones
 =======================
 
-- Use `newrelic_notification_destination` to create a notification destination
-- In `o11y/main.tf` add this code snippet after `# TODO: Create an email notification destination using the email variable`
+- Utilice newrelic_notification_destination para crear un destino de notificación
+- En `o11y/main.tf`, agregue este fragmento de código después de `# TODO: Crear un destino de notificación por correo electrónico utilizando la variable de correo electrónico`
 
 ```
 resource "newrelic_notification_destination" "alert_email_destination" {
@@ -243,8 +244,8 @@ resource "newrelic_notification_destination" "alert_email_destination" {
 }
 ```
 
-- Use `newrelic_notification_channel` to create a notification channel
-- In `o11y/main.tf` add this code snippet after `# TODO: Create an email notification channel using the email destination`
+- Usa `newrelic_notification_channel` para crear un canal de notificación
+- En `o11y/main.tf`, agrega este fragmento de código después de `# TODO: Crear una destino de notificación de correo electrónico utilizando la variable de correo electrónico.`
 
 ```
 resource "newrelic_notification_channel" "alert_notification_email" {
@@ -261,22 +262,22 @@ resource "newrelic_notification_channel" "alert_notification_email" {
 }
 ```
 
-- Remember to save the file.
+- Recuerde guardar el archivo.
 
-🏁 Step 3: Finish
+🏁 Paso 3: Finalizar
 =======================
 
 
-- Using the Terminal tab, preview the changes using the following command:
+- Utilizando la pestaña Terminal, previsualice los cambios utilizando el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez satisfecho con los cambios, ejecute el siguiente comando para aplicar los cambios.
 
 ```
 terraform apply
 ```
 
-- To complete the challenge, press **Check**
+- Para completar el desafío, presione **Check**

@@ -1,19 +1,19 @@
 ---
 slug: lab-dashboards
-id: 9mnwngvccpsz
+id: lmkvcmjjmi2u
 type: challenge
 title: 'Lab: Dashboards'
-teaser: Working with Dashboards
+teaser: Trabajando con Dashboards
 notes:
 - type: text
   contents: |-
     # Lab: Dashboards
 
-    In this challenge, you're tasked with
-     - Importing a dashboard from New Relic.
-     - Link to that imported dashboard
-     - Create a dynamic Dashboard based off a template file.
-     - Link to that custom dashboard
+    En este desafío, se le asigna la tarea de
+    - Importar un panel de control desde New Relic.
+    - Enlazar a ese panel de control importado.
+    - Crear un panel de control dinámico basado en un archivo de plantilla.
+    - Enlazar a ese panel de control personalizado.
 tabs:
 - title: Editor
   type: code
@@ -26,15 +26,15 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Import a New Relic Dashboard
+🧪 Paso 1: Importar un dashboard de New Relic
 =======================
 
-1. Navigate to New Relic and create a dashboard.
-2. Copy the pre-built dashboard as a json file.
-3. Save the file as `o11y/dashboard/import.json`
+1. Navegue a New Relic y cree un dashboard.
+2. Copie el dashboard preconstruido como un archivo json.
+3. Guarde el archivo como `o11y/dashboard/import.json`
 
-- After those steps, create a dashboard resource for the imported dashboard.
-- In `o11y/main.tf` add this code snippet after `# TODO: Import a dashboard from a JSON file`
+- Después de esos pasos, cree un recurso de dashboard para el dashboard importado.
+- En `o11y/main.tf` agregue este fragmento de código después de `# TODO: Import a dashboard from a JSON file`
 
 ```
 resource "newrelic_one_dashboard_json" "imported-dashboard" {
@@ -42,8 +42,8 @@ resource "newrelic_one_dashboard_json" "imported-dashboard" {
 }
 ```
 
-- Create a link to your imported dashboard
-- In `o11y/main.tf` add this code snippet after `# TODO: Output the permalink to the imported dashboard`
+- Cree un enlace a su dashboard importado
+- En `o11y/main.tf` agregue este fragmento de código después de `# TODO: Output the permalink to the imported dashboard`
 
 ```
 output "my-team-imported-dashboard" {
@@ -51,29 +51,27 @@ output "my-team-imported-dashboard" {
 }
 ```
 
-- Remember to save the file.
-
-- Using the Terminal tab, preview the changes using the following command:
+- Recuerde guardar el archivo.
+- Utilizando la pestaña Terminal, previsualice los cambios utilizando el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez que esté satisfecho con los cambios, ejecute el siguiente comando para aplicar los cambios.
 
 ```
 terraform apply
 ```
 
-🧪 Step 2: Create a dynamic Dashboard
+🧪 Paso 2: Crear un Dashboard dinámico
 =======================
 
-- Using the Editor tab, review `o11y/dashboards/custom.json.tftpl`
-- Notice the variables used `${variable_name}`
-- Variables can be passed into the template.
-
-- Create a custom dashboard resource using variables.
-- Add this code snippet after `# TODO: Create a dashboard from a template file`
+- Utilizando la pestaña Editor, revise `o11y/dashboards/custom.json.tftpl`
+- Observe las variables utilizadas `${nombre_variable}`
+- Las variables pueden pasarse a la plantilla.
+- Cree un recurso de dashboard personalizado utilizando variables.
+- Agregue este fragmento de código después de `# TODO: Create a dashboard from a template file`
 
 ```
 resource "newrelic_one_dashboard_json" "custom-dashboard" {
@@ -85,8 +83,8 @@ resource "newrelic_one_dashboard_json" "custom-dashboard" {
 }
 ```
 
-- Create a link to your custom dashboard
-- In `o11y/main.tf` add this code snippet after `# TODO: Output the permalink to the custom dashboard`
+- Cree un enlace a su dashboard personalizado
+- En `o11y/main.tf` agregue este fragmento de código después de `# TODO: Output the permalink to the custom dashboard`
 
 ```
 output "my-team-custom-dashboard" {
@@ -96,21 +94,22 @@ output "my-team-custom-dashboard" {
 
 - Remember to save the file.
 
-🏁 Step 3: Finish
+🏁 Paso 3: Finalizar
 =======================
 
 
 
-- Using the Terminal tab, navigate to `o11y` directory and run the following command to preview your changes:
+- Utilizando la pestaña Terminal, navegue al directorio `o11y` y ejecute el siguiente comando para previsualizar sus cambios:
+
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez que esté satisfecho con los cambios, ejecute el siguiente comando para aplicar los cambios.
 
 ```
 terraform apply
 ```
 
-To complete the challenge, press **Check**
+Para completar el desafío, presione **Check**

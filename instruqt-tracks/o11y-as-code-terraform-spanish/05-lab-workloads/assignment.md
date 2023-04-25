@@ -1,17 +1,17 @@
 ---
 slug: lab-workloads
-id: de2ewpgg5dch
+id: mduxblhrjf9f
 type: challenge
 title: 'Lab: Workloads'
-teaser: Use Workloads to organize your resources
+teaser: Utilice las cargas de trabajo para organizar sus recursos
 notes:
 - type: text
   contents: |-
-    # Use Workloads to organize your resources
+    # Utilice Cargas de trabajo para organizar sus recursos.
 
-    In this challenge, you're tasked with
-    - Creating a workload to organize all of your resources into one view (Full Stack)
-    - Linking to your workload and output a permalink
+    En este desafío, se le ha encomendado:
+    - Crear una carga de trabajo para organizar todos sus recursos en una vista (Full Stack).
+    - Enlazarlo con su carga de trabajo y generar un permalink.
 tabs:
 - title: Editor
   type: code
@@ -24,12 +24,12 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Create a Workload
+🧪 Paso 1: Crear una Carga de Trabajo
 =======================
 
-- A Workload is a collection of everything that you or your team is responsible for monitoring, troubleshooting and improving.
-- Workloads are created using a common tag to group all resources together.
-- Add this code snippet after `# TODO: Create a workload using the team tag`
+- Una Carga de Trabajo es una colección de todo lo que usted o su equipo son responsables de monitorear, solucionar problemas y  mejorar.
+- Las Cargas de Trabajo se crean usando una etiqueta común para agrupar todos los recursos juntos.
+- Agregue este fragmento de código después de `# TODO: Create a workload using the team tag`
 
 ```
 resource "newrelic_workload" "O11yAsCode" {
@@ -48,16 +48,15 @@ resource "newrelic_workload" "O11yAsCode" {
 }
 ```
 
-- Remember to save the file.
-
-- Review `TF_VAR_MY_TEAM_WORKLOAD_QUERY` and `TF_VAR_TAGS` in `o11y/terraform.tfvars`
-- Ensure that the `TF_VAR_TAGS` you create are reflected in `TF_VAR_MY_TEAM_WORKLOAD_QUERY`
+- Recuerde guardar el archivo.
+- Revise `TF_VAR_MY_TEAM_WORKLOAD_QUERY` y `TF_VAR_TAGS` en `o11y/terraform.tfvars`
+- Asegúrese de que las `TF_VAR_TAGS` que cree se reflejen en `TF_VAR_MY_TEAM_WORKLOAD_QUERY`
 
 🧪 Step 2: Link to your workload
 =======================
 
-- Create a link to your workload by outputting the permalink.
-- Add this code snippet after `# TODO: Output the permalink to the workload`
+- Cree un enlace a su carga de trabajo produciendo el permalink.
+- Agregue este fragmento de código después de `# TODO: Output the permalink to the workload`
 
 ```
 output "my-team-workload" {
@@ -65,21 +64,21 @@ output "my-team-workload" {
 }
 ```
 
-- Remember to save the file.
+- Recuerde guardar el archivo.
 
 🏁 Step 3: Finish
 =======================
 
-- Using the Terminal tab, preview the changes using the following command:
+- En la pestaña Terminal, previsualice los cambios con el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- When your ready, apply your changes:
+- Cuando esté listo, aplique los cambios:
 
 ```
 terraform apply
 ```
 
-- To complete the challenge, press **Check**
+- Para completar el desafío, presione **Check**

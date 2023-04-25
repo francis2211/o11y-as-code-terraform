@@ -1,7 +1,8 @@
 slug: o11y-as-code-terraform-spanish
+id: 5zibch9zjcaf
 title: O11y As Code Terraform Spanish
-teaser: This app demonstrates how to incorporate Terraform and New Relic together
-  using Observability as Code.
+teaser: Esta aplicación demuestra cómo incorporar Terraform y New Relic juntos utilizando
+  Observability as Code.
 description: O11y as Code Terraform Edition
 icon: https://storage.googleapis.com/instruqt-frontend/img/tracks/default.png
 tags: []
@@ -15,3 +16,4 @@ lab_config:
   overlay: false
   width: 25
   position: right
+checksum: "4121381939412843131"

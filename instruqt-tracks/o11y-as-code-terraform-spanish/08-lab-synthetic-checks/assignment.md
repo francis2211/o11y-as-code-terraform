@@ -1,17 +1,17 @@
 ---
 slug: lab-synthetic-checks
-id: woxwqjpyw82x
+id: peyqosomoipv
 type: challenge
 title: 'Lab: Synthetic Checks'
-teaser: Creating Synthetic Monitors
+teaser: Creando monitores sintéticos
 notes:
 - type: text
   contents: |-
-    # Creating Synthetic Monitors
+    # Crear Monitores Sintéticos
 
-    In this challenge, you're tasked with
-    - Monitoring a set of URLs for invalid SSL certificates
-    - Monitoring a set of URLs for broken links
+    En este desafío, se le solicita que:
+    - Monitoree un conjunto de URLs en busca de certificados SSL no válidos
+    - Monitoree un conjunto de URLs en busca de enlaces rotos
 tabs:
 - title: Editor
   type: code
@@ -24,11 +24,11 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Check for valid SSL certificates
+🧪  Paso 1: Verificar certificados SSL válidos
 =======================
 
-- Use the `newrelic_synthetics_cert_check_monitor` to check for invalid SSL certificates.
-- In `o11y/main.tf` add this code snippet after `# TODO: Create a Synthetics monitor to check for valid SSL certificates`
+- Use `newrelic_synthetics_cert_check_monitor` para verificar certificados SSL inválidos.
+- En `o11y/main.tf` agrega este fragmento de código después de `# TODO: Crear un monitor de sintéticos para verificar certificados SSL válidos`
 
 ```
 resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
@@ -52,15 +52,14 @@ resource "newrelic_synthetics_cert_check_monitor" "cert-check-monitor" {
 }
 ```
 
-- Remember to save the file.
+- Recuerda guardar el archivo.
+- Revisa la variable `TF_VAR_SYNTHETIC_CHECK_SSL` en `o11y/terraform.tfvars`
 
-- Review the `TF_VAR_SYNTHETIC_CHECK_SSL` variable in `o11y/terraform.tfvars`
-
-🧪 Step 2: Check for broken links
+🧪 Paso 2: Verificar enlaces rotos
 =======================
 
-- Use the `newrelic_synthetics_broken_links_monitor` to check for broken links.
-- In `o11y/main.tf` add this code snippet after `# TODO: Create a Synthetics monitor to check for broken links`
+- Use `newrelic_synthetics_broken_links_monitor` para verificar enlaces rotos.
+- En `o11y/main.tf` agrega este fragmento de código después de `# TODO: Crear un monitor de sintéticos para verificar enlaces rotos`
 
 ```
 resource "newrelic_synthetics_broken_links_monitor" "monitor" {
@@ -82,25 +81,24 @@ resource "newrelic_synthetics_broken_links_monitor" "monitor" {
   }
 }
 ```
-- Remember to save the file.
+- Recuerda guardar el archivo.
+- Revisa la variable `TF_VAR_SYNTHETIC_CHECK_SSL` en `o11y/terraform.tfvars`
 
-- Review the `TF_VAR_SYNTHETIC_CHECK_SSL` variable in `o11y/terraform.tfvars`
-
-🏁 Step 3: Finish
+🏁 Paso 3: Finalizar
 =======================
 
 
 
-- Preview the changes using the following command:
+- Revisa los cambios que se realizarán usando el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez que estés satisfecho con los cambios, ejecuta el siguiente comando para aplicar los cambios.
 
 ```
 terraform apply
 ```
 
-To complete the challenge, press **Check**
+Para completar el desafío, presiona  **Check**

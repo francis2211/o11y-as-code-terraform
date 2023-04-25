@@ -1,19 +1,19 @@
 ---
 slug: getting-started
-id: 
+id: jrfv24uxeyzj
 type: challenge
 title: Getting Started
-teaser: Getting Started with Terraform
+teaser: Comenzando con Terraform
 notes:
 - type: text
   contents: |-
     # Empezando con Observability as Code
 
     En este desafío, se te pide que
-    - te registres en una cuenta gratuita de New Relic
-    - configures tus aplicaciones con la clave de licencia de NEW_RELIC_LICENSE_KEY
-    - inicies tus aplicaciones para generar telemetría
-    - revises los registros para asegurarte de que todo está funcionando
+    - Te registres en una cuenta gratuita de New Relic
+    - Configures tus aplicaciones con la clave de licencia de NEW_RELIC_LICENSE_KEY
+    - Inicies tus aplicaciones para generar telemetría
+    - Revises los registros para asegurarte de que todo está funcionando
 tabs:
 - title: Terminal
   type: terminal

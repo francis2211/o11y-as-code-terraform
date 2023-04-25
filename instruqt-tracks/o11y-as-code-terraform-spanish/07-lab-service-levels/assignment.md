@@ -1,17 +1,18 @@
 ---
 slug: lab-service-levels
-id: bhzejg2pww10
+id: ybxqr81ifw0t
 type: challenge
 title: 'Lab: Service Levels'
-teaser: Creating SLIs and SLOs for your applications
+teaser: Creando SLIs y SLOs para sus aplicaciones
 notes:
 - type: text
   contents: |-
-    # Creating SLIs and SLOs for your applications
+    # Creación de SLIs y SLOs para tus aplicaciones
 
-    In this challenge, you're tasked with
-    - Create a Serivce Level Indicator for the latency of your applications
-    - Create a Serivce Level Indicator for the error rates of your applications
+    En este desafío, se te asigna la tarea de:
+
+    - Crear un Indicador de Nivel de Servicio (SLI) para la latencia de tus aplicaciones.
+    - Crear un Indicador de Nivel de Servicio (SLI) para las tasas de error de tus aplicaciones.
 tabs:
 - title: Editor
   type: code
@@ -24,11 +25,11 @@ tabs:
 difficulty: basic
 timelimit: 600
 ---
-🧪 Step 1: Create a SLI for latency
+🧪 Paso 1: Crear un SLI para latencia
 =======================
 
-- Create a service level indicator for each application using `newrelic_service_level`
-- In `o11y/main.tf` add this code snippet after `# TODO: Create a Serivce Level Indicator for the latency of your applications`
+- Cree un indicador de nivel de servicio para cada aplicación utilizando `newrelic_service_level`
+- En `o11y/main.tf`, agregue este fragmento de código después de `# TODO: Create a Serivce Level Indicator for the latency of your applications`
 
 ```
 resource "newrelic_service_level" "latency" {
@@ -61,13 +62,13 @@ resource "newrelic_service_level" "latency" {
 }
 ```
 
-- Remember to save the file.
+- Recuerde guardar el archivo.
 
-🧪 Step 2: Create a SLI for error rates
+🧪 Paso 2: Crear un SLI para la tasa de error
 =======================
 
-- Create a service level indicator for each application using `newrelic_service_level`
-- In `o11y/main.tf` add this code snippet after `# TODO: Create a Serivce Level Indicator for the error rates of your applications`
+- Cree un indicador de nivel de servicio para cada aplicación utilizando `newrelic_service_level`
+- En `o11y/main.tf`, agregue este fragmento de código después de `# TODO: Create a Serivce Level Indicator for the error rates of your applications`
 
 ```
 resource "newrelic_service_level" "error-rate" {
@@ -100,24 +101,24 @@ resource "newrelic_service_level" "error-rate" {
 }
 ```
 
-- Remember to save the file.
+- Recuerde guardar el archivo.
 
-🏁 Step 3: Finish
+🏁 Paso 3: Finalizar
 =======================
 
 
 
-- Using the Terminal tab, preview the changes using the following command:
+- Usando la pestaña Terminal, previsualice los cambios usando el siguiente comando:
 
 ```
 terraform plan
 ```
 
-- Once you're satisfied with the changes, run the following command to apply the changes.
+- Una vez que esté satisfecho con los cambios, ejecute el siguiente comando para aplicarlos:
 
 ```
 terraform apply
 ```
 
-- To complete the challenge, press **Check**
+- Para completar el desafío, presione **Check**
 
