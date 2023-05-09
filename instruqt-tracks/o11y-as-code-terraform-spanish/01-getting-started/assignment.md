@@ -54,7 +54,7 @@ makefileCopy code
     ```
     NEW_RELIC_LICENSE_KEY=AABBCC
     ```
-Nota: `NRIA_LICENSE_KEY` toma el mismo valor que `NEW_RELIC_LICENSE_KEY`.
+Nota: `NRIA_LICENSE_KEY` toma el mismo valor que `NEW_RELIC_LICENSE_KEY`. (Ingest Key)
 
 🏁 Paso 3: Finalizar
 ====================
