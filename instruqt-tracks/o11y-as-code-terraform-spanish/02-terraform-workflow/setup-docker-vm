@@ -7,5 +7,5 @@
 #
 
 echo "This is the setup script"
-
+set-workdir /newrelic/o11y
 exit 0
