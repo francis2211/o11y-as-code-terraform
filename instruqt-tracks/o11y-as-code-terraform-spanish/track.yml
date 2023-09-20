@@ -8,7 +8,6 @@ icon: https://www.datocms-assets.com/2885/1620155116-brandhcterraformverticalcol
 tags: []
 owner: newrelic
 developers:
-- pdunbar@newrelic.com
 - fisabel@newrelic.com
 show_timer: true
 timelimit: 7800
