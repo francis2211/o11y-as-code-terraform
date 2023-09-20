@@ -7,7 +7,6 @@ icon: https://storage.googleapis.com/instruqt-frontend/img/tracks/default.png
 tags: []
 owner: newrelic
 developers:
-- pdunbar@newrelic.com
 - fisabel@newrelic.com
 show_timer: true
 timelimit: 7800
